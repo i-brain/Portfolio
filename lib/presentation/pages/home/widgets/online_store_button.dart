@@ -49,15 +49,15 @@ class _OnlineStoreButtonState extends State<OnlineStoreButton> {
             children: [
               Image.asset(
                 widget.imageAsset,
-                height: 100,
-                width: 100,
+                height: 60,
+                width: 60,
               ),
               const SizedBox(height: 10),
               Text(
                 widget.title,
-                style: AppTextStyles.styleW600.copyWith(
-                  fontSize: 16,
-                  color: Colors.blue,
+                style: AppTextStyles.styleBold.copyWith(
+                  fontSize: 14,
+                  color: Colors.black,
                 ),
                 maxLines: 1,
               )

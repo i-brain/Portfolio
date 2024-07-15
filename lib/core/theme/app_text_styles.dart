@@ -27,4 +27,10 @@ class AppTextStyles {
     fontStyle: FontStyle.normal,
     color: Colors.black,
   );
+
+  static final styleBold = GoogleFonts.mulish(
+    fontWeight: FontWeight.bold,
+    fontStyle: FontStyle.normal,
+    color: Colors.black,
+  );
 }

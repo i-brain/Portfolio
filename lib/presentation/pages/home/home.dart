@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/constants/assets.dart';
-import 'package:portfolio/core/theme/app_text_styles.dart';
 import 'package:portfolio/presentation/pages/home/widgets/project_list_item.dart';
 
 class HomePage extends StatefulWidget {
@@ -62,6 +61,15 @@ class _HomePageState extends State<HomePage> {
           'https://play.google.com/store/apps/details?id=com.frazex.ceo_events_new',
     ),
     ProjectDetails(
+      cover: AppImages.nextipsCover,
+      logo: AppImages.nextipsLogo,
+      title: 'Nextips',
+      description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+      googlePlayUrl:
+          ' https://play.google.com/store/apps/details?id=com.yes.accessories&hl=en&gl=US',
+    ),
+    ProjectDetails(
       cover: AppImages.accessoriesCover,
       logo: AppImages.accessoriesLogo,
       title: 'Yes Accessories',
@@ -71,34 +79,29 @@ class _HomePageState extends State<HomePage> {
           ' https://play.google.com/store/apps/details?id=com.yes.accessories&hl=en&gl=US',
     ),
   ];
+  int crossAxisCount = 3;
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    double childAspectRatio = size.width / size.height;
+    if (size.width < 750) {
+      crossAxisCount = 1;
+    } else if (size.width < 1050) {
+      crossAxisCount = 2;
+    } else {
+      crossAxisCount = 3;
+    }
+
     return Scaffold(
       backgroundColor: Colors.white,
-      body: ListView(
-        children: [
-          Text(
-            'This website is made with Flutter',
-            style: AppTextStyles.styleW700.copyWith(fontSize: 30),
-          ),
-          Text(
-            'Projects',
-            style: AppTextStyles.styleW700.copyWith(fontSize: 25),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          ListView.separated(
-            physics: const NeverScrollableScrollPhysics(),
-            itemCount: projectList.length,
-            shrinkWrap: true,
-            itemBuilder: (context, index) => ProjectListItem(
-              project: projectList[index],
-            ),
-            separatorBuilder: (context, index) => const SizedBox(height: 20),
-          ),
-        ],
+      body: GridView.count(
+        crossAxisCount: crossAxisCount,
+        childAspectRatio:
+            crossAxisCount == 1 ? childAspectRatio * 2 : childAspectRatio,
+        children: projectList
+            .map((element) => ProjectListItem(project: element))
+            .toList(),
       ),
     );
   }

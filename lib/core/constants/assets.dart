@@ -20,4 +20,6 @@ class AppImages {
   static const movementLogo = '$_basePath/movement_logo.png';
   static const ceoEventsLogo = '$_basePath/ceo_logo.png';
   static const accessoriesLogo = '$_basePath/accessories_logo.png';
+  static const nextipsLogo = '$_basePath/nextips_logo.png';
+  static const nextipsCover = '$_basePath/nextips_cover.png';
 }
