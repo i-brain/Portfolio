@@ -1,34 +1,38 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AppTextStyles {
   const AppTextStyles._();
 
-  static final styleW400 = GoogleFonts.mulish(
+  static const styleW400 = TextStyle(
+    fontFamily: 'Play',
     fontWeight: FontWeight.w400,
     fontStyle: FontStyle.normal,
     color: Colors.black,
   );
 
-  static final styleW500 = GoogleFonts.mulish(
+  static const styleW500 = TextStyle(
+    fontFamily: 'Play',
     fontWeight: FontWeight.w500,
     fontStyle: FontStyle.normal,
     color: Colors.black,
   );
 
-  static final styleW600 = GoogleFonts.mulish(
+  static const styleW600 = TextStyle(
+    fontFamily: 'Play',
     fontWeight: FontWeight.w600,
     fontStyle: FontStyle.normal,
     color: Colors.black,
   );
 
-  static final styleW700 = GoogleFonts.mulish(
+  static const styleW700 = TextStyle(
+    fontFamily: 'Play',
     fontWeight: FontWeight.w700,
     fontStyle: FontStyle.normal,
     color: Colors.black,
   );
 
-  static final styleBold = GoogleFonts.mulish(
+  static const styleBold = TextStyle(
+    fontFamily: 'Play',
     fontWeight: FontWeight.bold,
     fontStyle: FontStyle.normal,
     color: Colors.black,

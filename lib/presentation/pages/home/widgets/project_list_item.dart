@@ -37,24 +37,24 @@ class ProjectListItem extends StatelessWidget {
                   const SizedBox(height: 20),
                   Text(
                     project.title,
-                    style: AppTextStyles.styleBold
+                    style: AppTextStyles.styleW500
                         .copyWith(fontSize: 18, color: Colors.black),
                   ),
                 ],
               ),
               const SizedBox(width: 20),
-              const Column(
+              Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   OnlineStoreButton(
                     title: 'Google Play',
                     imageAsset: AppImages.googlePlayLogo,
-                    url: 'https://google.com',
+                    url: project.googlePlayUrl,
                   ),
                   OnlineStoreButton(
                     title: 'App Store',
                     imageAsset: AppImages.appStoreLogo,
-                    url: '',
+                    url: project.appStoreUrl,
                   ),
                 ],
               )
@@ -68,18 +68,18 @@ class ProjectListItem extends StatelessWidget {
 
 class ProjectDetails {
   const ProjectDetails({
-    required this.description,
+    this.description,
     required this.title,
     required this.googlePlayUrl,
     this.appStoreUrl,
-    required this.cover,
+    this.cover,
     required this.logo,
   });
 
-  final String description;
+  final String? description;
   final String title;
   final String googlePlayUrl;
   final String? appStoreUrl;
-  final String cover;
+  final String? cover;
   final String logo;
 }

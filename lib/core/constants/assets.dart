@@ -22,4 +22,9 @@ class AppImages {
   static const accessoriesLogo = '$_basePath/accessories_logo.png';
   static const nextipsLogo = '$_basePath/nextips_logo.png';
   static const nextipsCover = '$_basePath/nextips_cover.png';
+  static const hollywoodLogo = '$_basePath/hollywood_logo.png';
+  static const ra9Logo = '$_basePath/ra9_logo.png';
+  static const rahatLogo = '$_basePath/rahat_logo.png';
+  static const lilacLogo = '$_basePath/lilac_logo.png';
+  static const tezibuLogo = '$_basePath/tezibu_logo.png';
 }

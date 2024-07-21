@@ -13,7 +13,7 @@ class OnlineStoreButton extends StatefulWidget {
 
   final String title;
   final String imageAsset;
-  final String url;
+  final String? url;
 
   @override
   State<OnlineStoreButton> createState() => _OnlineStoreButtonState();
@@ -24,6 +24,9 @@ class _OnlineStoreButtonState extends State<OnlineStoreButton> {
 
   @override
   Widget build(BuildContext context) {
+    if (widget.url == null) {
+      return const SizedBox();
+    }
     return MouseRegion(
       onEnter: (event) {
         setState(() {
@@ -55,7 +58,7 @@ class _OnlineStoreButtonState extends State<OnlineStoreButton> {
               const SizedBox(height: 10),
               Text(
                 widget.title,
-                style: AppTextStyles.styleBold.copyWith(
+                style: AppTextStyles.styleW500.copyWith(
                   fontSize: 14,
                   color: Colors.black,
                 ),
@@ -69,6 +72,9 @@ class _OnlineStoreButtonState extends State<OnlineStoreButton> {
   }
 
   void _launcUrl() {
+    setState(() {
+      isHovering = false;
+    });
     js.context.callMethod('open', [widget.url]);
   }
 }
