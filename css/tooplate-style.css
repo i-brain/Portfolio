@@ -345,7 +345,7 @@ b, strong {
 .timeline-info {
   display: inline-block;
   vertical-align: top;
-  max-width: 100%; /* Allow full width usage */
+  max-width: 100%; 
   margin-left: 6em;
   flex: 1;
 }
@@ -353,10 +353,10 @@ b, strong {
 
 
 .timeline-info p {
-  margin: 0; /* Remove default margins */
-  padding: 0; /* Remove default padding */
-  width: 100%; /* Ensure paragraphs take full width */
-  box-sizing: border-box; /* Include padding and border in element's total width */
+  margin: 0; 
+  padding: 0; 
+  width: 100%; 
+  box-sizing: border-box; 
 }
 .timeline-info small {
   color: #474559;
@@ -411,26 +411,26 @@ b, strong {
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
   background: #5b5b5b;
 }
-/* Contact Section */
+
 .contact-wrapper {
   display: flex;
-  justify-content: center; /* Center the content if needed */
-  align-items: flex-start; /* Align items at the start */
+  justify-content: center; 
+  align-items: flex-start; 
 }
 
 .contact-info {
   width: 100%;
-  padding: 1.5rem; /* Padding for all sides */
-  border-radius: 8px; /* Rounded corners */
-  background: #474559; /* Background color for contact info box */
-  color: #f7f3f3; /* Text color */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visual separation */
+  padding: 1.5rem; 
+  border-radius: 8px; 
+  background: #474559; 
+  color: #f7f3f3; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   position: relative;
 }
 
 .contact-header {
   display: flex;
-  justify-content: space-between; /* Space out the title and country name */
+  justify-content: space-between; 
   align-items: center;
 }
 
@@ -439,9 +439,9 @@ b, strong {
   text-align: right;
 }
 
-/* Other existing styles */
+
 .contact-info h3, .contact-info p {
-  color: #f7f3f3; /* Ensure text is readable */
+  color: #f7f3f3; 
 }
 
 .contact-info ul.social-links {
@@ -449,7 +449,7 @@ b, strong {
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 1rem; /* Space between social icons */
+  gap: 1rem; 
 }
 
 .contact-info ul.social-links .uil {
@@ -490,8 +490,8 @@ b, strong {
   border: 0;
   cursor: pointer;
   transition: all 0.4s ease;
-  width: auto; /* Fix the size of the send button */
-  padding: 10px 20px; /* Adjust padding for the button */
+  width: auto; 
+  padding: 10px 20px; 
 }
 
 .contact-form .submit-btn:hover {
@@ -612,7 +612,7 @@ b, strong {
   }
 }
 
- /*Project section*/
+ 
 
 .project-info {
   display: flex;
@@ -630,13 +630,11 @@ b, strong {
   flex-direction: row;
   align-items: center;
   align-self:self-start;
-  /* margin-right: 20px; */
-  flex-shrink: 0;
-  /* padding-left: 20px; */
-  /* margin-left: 20px; */
+  width: 100%;
+
 }
 
-
+@media (min-width: 1000px) {
 .app-logo {
   width: 96px;
   height: 96px;
@@ -644,16 +642,16 @@ b, strong {
   border-radius: 10px;
   margin-right: 15px;
   margin-bottom: 10px;
+  flex: 0;
 }
-
 .app-cover {
-  width: 200px;
   height: 500px;
-  object-fit: contain;
   border-radius: 10px;
   margin-bottom: 10px;
+  object-fit: contain;
 }
 
+}
 .project-details {
   flex-grow: 1;
   margin-left: 20px;
@@ -668,80 +666,134 @@ b, strong {
 
 .project-details p {
   font-family: "Georgia";
-  font-size: 20px; /* Adjust the size as needed */
+  font-size: 20px; 
   font-weight: 500;
-  line-height: 1.6; /* Adjust the line height for readability */
-  color: black; /* Adjust the color as needed */
+  line-height: 1.6; 
+  color: black; 
 }
 
 
 .small-images {
   display: flex;
   justify-content: center;
-  margin-top: 10px; /* Spacing between description and small images */
+  margin-top: 10px; 
   align-self: self-start;
   margin-left: 20px;
 }
 
 .small-images p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 20px; /* Adjust the size as needed */
+  font-size: 20px; 
   font-weight: 500;
-  line-height: 1.6; /* Adjust the line height for readability */
-  color: black; /* Adjust the color as needed */
+  line-height: 1.6; 
+  color: black; 
 }
 
 .small-img-wrapper {
   text-align: center;
-  margin-right: 15px; /* Add space between the images */
-  overflow: hidden; /* Hide any overflow from the zoom effect */
+  margin-right: 15px; 
+  overflow: hidden; 
 
 }
 
 .small-img-wrapper:last-child {
-  margin-right: 0; /* Remove right margin for the last image */
+  margin-right: 0; 
 }
 
 .small-img-title {
   margin-top: 5px;
-  font-size: 14px; /* Increase font size */
-  font-weight: bold; /* Make the font bold */
-  color: #333; /* Adjust color as needed */
+  font-size: 14px; 
+  font-weight: bold; 
+  color: #333; 
 }
 
 .small-img {
-  width: 64px; /* Fixed size for smaller images */
+  width: 64px; 
   height: 64px;
-  object-fit: contain; /* Ensure the image fits within the specified dimensions */
-  border-radius: 8px; /* Rounded corners */
-  transition: opacity 0.3s ease; /* Smooth transition for the opacity effect */
+  object-fit: contain; 
+  border-radius: 8px; 
+  transition: opacity 0.3s ease; 
   
 }
 
 .small-img:hover {
-  opacity: 0.7; /* Slightly transparent on hover */
+  opacity: 0.7; 
 }
 
 .small-img-wrapper.ml-2 {
-  margin-left: 10px; /* Spacing between small images */
+  margin-left: 10px; 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .project-info {
     flex-direction: column;
     align-items: center;
+    text-align: center; 
   }
 
   .project-details {
     margin-top: 20px;
     margin-left: 0;
-    min-height: auto; /* Remove fixed height on small screens */
+    min-height: auto; 
+    width: 100%; 
+  }
+
+  .project-images {
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+    margin-bottom: 20px; 
+    flex: 0;
+  }
+
+  .app-logo{
+    width: 128px;
+    height: 128px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .app-cover {
+    height: 500px; 
+    margin-bottom: 10px; 
+  border-radius: 10px;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  
+  .small-images {
+    flex-direction: row; 
+    align-self: center;
   }
 
   .small-img-wrapper {
     margin-right: 0;
-    margin-top: 10px; /* Add spacing between small images on small screens */
+    margin-top: 10px; 
+  }
+
+  .contact-info {
+    overflow: hidden; 
+  }
+  .contact-info h3 {
+    padding-top: 20px; 
+  }
+  .contact-info h3, .contact-info p {
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+  }
+
+  .contact-info ul.social-links {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .contact-info ul.social-links .uil {
+    font-size: 18px; 
+    margin: 5px 0; 
+  }
+  .about-text {
+    padding: 10px; 
   }
 }
-
- /*Project section*/
